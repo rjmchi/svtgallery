@@ -1915,9 +1915,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
+  data: function data() {
+    return {
+      gallery: [],
+      image: {
+        id: '',
+        title: '',
+        width: '',
+        height: ''
+      },
+      pagination: {}
+    };
+  },
+  methods: {
+    fetchGallery: function fetchGallery() {
+      var _this = this;
+
+      fetch('api/galleries').then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this.gallery = res.data;
+      });
+    }
+  },
+  created: function created() {
+    this.fetchGallery();
   }
 });
 
@@ -6355,7 +6383,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "h1[data-v-a13cd294] {\n  color: #5f00f5;\n}", ""]);
+exports.push([module.i, ".container[data-v-a13cd294] {\n  display: flex;\n  flex-wrap: wrap;\n}\nh1[data-v-a13cd294] {\n  color: #5f00f5;\n  flex-basis: 100%;\n}\n.sidebar[data-v-a13cd294] {\n  display: flex;\n  width: 200px;\n  flex-wrap: wrap;\n}\n.image[data-v-a13cd294] {\n  width: 680px;\n  border: 1px solid #000;\n}", ""]);
 
 // exports
 
@@ -38150,20 +38178,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("h1", [_vm._v("Gallery")]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "sidebar" },
+      _vm._l(_vm.gallery, function(image) {
+        return _c("span", { key: image.id }, [
+          _c("img", {
+            attrs: { src: image.image, alt: image.title, width: "150" }
+          })
+        ])
+      }),
+      0
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "image" })
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("h1", [_vm._v("Gallery")]),
-      _vm._v(" "),
-      _c("p", [_vm._v("From Vue Component")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
