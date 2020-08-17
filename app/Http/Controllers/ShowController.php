@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Show;
 use Illuminate\Http\Request;
 use App\Http\Resources\Show as ShowResource;
+use Carbon\Carbon;
 
 class ShowController extends Controller
 {
@@ -15,7 +16,9 @@ class ShowController extends Controller
      */
     public function index()
     {
-        $s = Show::get();
+        $now = Carbon::today();
+        $now->subtract(1, 'day');
+        $s = Show::where('end', '>', $now)->orderBy('start')->get();
         return ShowResource::collection($s);
     }
 
