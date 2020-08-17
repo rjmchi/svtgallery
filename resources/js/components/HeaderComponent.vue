@@ -3,10 +3,10 @@
       <h1>Stephanie Templin<span>Paintings and Drawings</span></h1>
       <div class="nav">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#shows">Shows</a></li>
+            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/gallery">Gallery</router-link></li>
+            <li><router-link to="/contact">Contact</router-link></li>
+            <li><router-link to="/shows">Shows</router-link></li>  
         </ul>
       </div>
   </div>
