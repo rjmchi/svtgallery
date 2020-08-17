@@ -1,9 +1,8 @@
 <template>
     <div class="container">
-        <h1>Gallery</h1>
         <div class="sidebar">
             <span v-for="image in gallery" v-bind:key=image.id>
-            <img v-bind:src="image.image" v-bind:alt="image.title" width="150">
+                <img v-bind:src="image.image" v-bind:alt="image.title" width="150">
             </span>   
         </div>
         <div class="image"></div>
@@ -40,6 +39,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
     .container {
         display:flex;
         flex-wrap:wrap;

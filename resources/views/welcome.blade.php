@@ -13,7 +13,12 @@
     </head>
     <body>
         <div id="app">
+            <header-component></header-component>
+            <home-component></home-component>
             <gallery-component></gallery-component>
+            <contact-component></contact-component>
+            <shows-component></shows-component>
+            <footer-component></footer-component>
         </div>
         <script src="{{asset('js/app.js')}}"></script>
 </html>
