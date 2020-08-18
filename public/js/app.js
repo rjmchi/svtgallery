@@ -1976,16 +1976,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       gallery: [],
       image: {
         id: '',
+        image: '',
         title: '',
         width: '',
         height: ''
       },
+      img: {},
       pagination: {}
     };
   },
@@ -1997,6 +2002,16 @@ __webpack_require__.r(__webpack_exports__);
         return res.json();
       }).then(function (res) {
         _this.gallery = res.data;
+        _this.img = _this.gallery[0];
+      });
+    },
+    switchImage: function switchImage(id) {
+      var _this2 = this;
+
+      fetch('api/galleries/' + id).then(function (res) {
+        return res.json();
+      }).then(function (res) {
+        _this2.img = res.data;
       });
     }
   },
@@ -6596,7 +6611,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".container[data-v-a13cd294] {\n  display: flex;\n  flex-wrap: wrap;\n}\nh1[data-v-a13cd294] {\n  color: #5f00f5;\n  flex-basis: 100%;\n}\n.sidebar[data-v-a13cd294] {\n  display: flex;\n  width: 200px;\n  flex-wrap: wrap;\n}\n.image[data-v-a13cd294] {\n  width: 680px;\n  border: 1px solid #000;\n}", ""]);
+exports.push([module.i, ".container[data-v-a13cd294] {\n  display: flex;\n  flex-wrap: wrap;\n  background-color: #036;\n  padding-top: 25px;\n}\nh1[data-v-a13cd294] {\n  color: #5f00f5;\n  flex-basis: 100%;\n}\n.sidebar[data-v-a13cd294] {\n  display: flex;\n  width: 200px;\n  flex-wrap: wrap;\n  margin-left: 25px;\n}\n.image[data-v-a13cd294] {\n  width: 680px;\n}\n.image .title[data-v-a13cd294] {\n  text-align: center;\n  color: #fff;\n  font-size: 1em;\n  font-weight: bold;\n}", ""]);
 
 // exports
 
@@ -6653,7 +6668,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".shows[data-v-4f403f9c] {\n  margin-left: 100px;\n  margin-top: 25px;\n  color: #fff;\n  margin-bottom: 50px;\n}\n.shows h2[data-v-4f403f9c] {\n  color: #099;\n  font-size: 36px;\n  margin-bottom: 15px;\n}\n.shows h3[data-v-4f403f9c] {\n  font-size: 24px;\n  margin-bottom: 15px;\n}\n.shows p[data-v-4f403f9c] {\n  font-size: 20px;\n  line-height: 34px;\n}", ""]);
+exports.push([module.i, ".shows[data-v-4f403f9c] {\n  padding-left: 100px;\n  padding-top: 25px;\n  color: #fff;\n  margin-bottom: 50px;\n  background-color: #036;\n}\n.shows h2[data-v-4f403f9c] {\n  color: #099;\n  font-size: 36px;\n  margin-bottom: 15px;\n}\n.shows h3[data-v-4f403f9c] {\n  font-size: 24px;\n  margin-bottom: 15px;\n}\n.shows p[data-v-4f403f9c] {\n  font-size: 20px;\n  line-height: 34px;\n}", ""]);
 
 // exports
 
@@ -38736,16 +38751,31 @@ var render = function() {
       "div",
       { staticClass: "sidebar" },
       _vm._l(_vm.gallery, function(image) {
-        return _c("span", { key: image.id }, [
-          _c("img", {
-            attrs: { src: image.image, alt: image.title, width: "150" }
-          })
-        ])
+        return _c(
+          "span",
+          {
+            key: image.id,
+            on: {
+              click: function($event) {
+                return _vm.switchImage(image.id)
+              }
+            }
+          },
+          [
+            _c("img", {
+              attrs: { src: image.image, alt: image.title, width: "150" }
+            })
+          ]
+        )
       }),
       0
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "image" })
+    _c("div", { staticClass: "image" }, [
+      _c("img", { attrs: { src: _vm.img.image } }),
+      _vm._v(" "),
+      _c("p", { staticClass: "title" }, [_vm._v(_vm._s(_vm.img.title))])
+    ])
   ])
 }
 var staticRenderFns = []
