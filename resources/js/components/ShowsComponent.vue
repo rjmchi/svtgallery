@@ -46,10 +46,11 @@ export default {
 
 <style lang="scss" scoped>
   .shows {
-    margin-left:100px;
-    margin-top:25px;
+    padding-left:100px;
+    padding-top:25px;
     color:#fff;
     margin-bottom:50px;
+    background-color:#036;
     h2 {
       color:#099;
       font-size:36px;
