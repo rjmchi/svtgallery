@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="main">
-      <img src="" width="300" height="400">
+      <img src="/images/home.jpg" width="300" height="400">
       <div class="blurb">
         <p>I use the change of seasons, the shift in sunlight, flowers, and fall leaves, as individual elements to compose my pictures. Creating my own landscapes allows me to integrate the beauty of the natural world with my own inner spirit. My Paintings become my own natural history.</p>
         </div>
@@ -33,7 +33,7 @@ export default {
   }
   .main {
     display:flex;
-    img { 
+    img {
       margin-left:100px;
       margin-top:10px;
     }

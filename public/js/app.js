@@ -38881,7 +38881,9 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "home" }, [
       _c("div", { staticClass: "main" }, [
-        _c("img", { attrs: { src: "", width: "300", height: "400" } }),
+        _c("img", {
+          attrs: { src: "/images/home.jpg", width: "300", height: "400" }
+        }),
         _vm._v(" "),
         _c("div", { staticClass: "blurb" }, [
           _c("p", [
