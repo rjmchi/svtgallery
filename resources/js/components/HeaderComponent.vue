@@ -6,7 +6,7 @@
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/gallery">Gallery</router-link></li>
             <li><router-link to="/contact">Contact</router-link></li>
-            <li><router-link to="/shows">Shows</router-link></li>  
+            <li><router-link to="/shows">Shows</router-link></li>
         </ul>
       </div>
   </div>
@@ -30,14 +30,14 @@ export default {
 </script>
 
 <style lang="scss">
-    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');    
+  @import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
 
 * {
   margin:0;
   padding:0;
 }
 body {
-  font-family: 'Comfortaa', sans-serif;
+  font-family: 'Paprika', sans-serif;
   background-color:#369;
 }
 .header {

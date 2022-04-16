@@ -6627,10 +6627,10 @@ exports.push([module.i, ".container[data-v-a13cd294] {\n  display: flex;\n  flex
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Comfortaa&display=swap);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Paprika&display=swap);", ""]);
 
 // module
-exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n}\nbody {\n  font-family: \"Comfortaa\", sans-serif;\n  background-color: #369;\n}\n.header {\n  background-color: #369;\n  height: 150px;\n}\nh1 {\n  color: #099;\n  font-size: 60px;\n  padding: 5px 10px 10px 10px;\n}\nh1 span {\n  font-size: 28px;\n  margin-left: 40px;\n}\n.nav {\n  border-top: 2px solid #000;\n  border-bottom: 2px solid #000;\n  background-color: #099;\n}\n.nav ul {\n  list-style: none;\n  margin-left: 150px;\n  color: #000;\n  font-size: 14px;\n}\n.nav ul li {\n  display: inline-block;\n  line-height: 40px;\n  width: 110px;\n}\n.nav ul li a {\n  color: #000;\n  text-decoration: none;\n}\n.nav ul li a:hover {\n  color: #fff;\n}", ""]);
+exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n}\nbody {\n  font-family: \"Paprika\", sans-serif;\n  background-color: #369;\n}\n.header {\n  background-color: #369;\n  height: 150px;\n}\nh1 {\n  color: #099;\n  font-size: 60px;\n  padding: 5px 10px 10px 10px;\n}\nh1 span {\n  font-size: 28px;\n  margin-left: 40px;\n}\n.nav {\n  border-top: 2px solid #000;\n  border-bottom: 2px solid #000;\n  background-color: #099;\n}\n.nav ul {\n  list-style: none;\n  margin-left: 150px;\n  color: #000;\n  font-size: 14px;\n}\n.nav ul li {\n  display: inline-block;\n  line-height: 40px;\n  width: 110px;\n}\n.nav ul li a {\n  color: #000;\n  text-decoration: none;\n}\n.nav ul li a:hover {\n  color: #fff;\n}", ""]);
 
 // exports
 
@@ -54830,8 +54830,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Robert\Documents\www\svtgallery\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Robert\Documents\www\svtgallery\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\rober\MyDocuments\www\svtgallery\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\rober\MyDocuments\www\svtgallery\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
