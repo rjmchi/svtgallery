@@ -13,7 +13,7 @@ class ShowSeeder extends Seeder
      */
     public function run()
     {
-        $s = new App\Show();
+        $s = new App\Models\Show();
         $s->title = "Sip Coffee House and Garden";
         $s->start = Carbon::create(2016,11,1);
         $s->end = Carbon::create(2016,12,6);

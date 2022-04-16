@@ -12,7 +12,7 @@ class GallerySeeder extends Seeder
     public function run()
     {
         for ($i=1;$i<10;$i++){
-            $g = new App\Gallery();
+            $g = new App\Models\Gallery();
             $g->title = 'Image '. $i;
             $g->width = 640;
             $g->height = 480;

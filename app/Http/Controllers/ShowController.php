@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Show;
+use App\Models\Show;
 use Illuminate\Http\Request;
 use App\Http\Resources\Show as ShowResource;
 use Carbon\Carbon;
@@ -40,7 +40,7 @@ class ShowController extends Controller
      */
     public function store(Request $request)
     {
-        $s = new App\Show();
+        $s = new Show();
         $s->title = $request->title;
         $s->start = $request->start;
         $s->end = $request->end;
@@ -49,7 +49,7 @@ class ShowController extends Controller
         $s->city = $request->city;
         $s->state = $request->state;
         $s->zip = $request->zip;
-        $s->save();        
+        $s->save();
     }
 
     /**
